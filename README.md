@@ -4,122 +4,162 @@
 
 <h1>Enterprise Data Platform Accelerator (EDPA)</h1>
 
-<p><strong>High-Performance Cloud Foundation &middot; Governed Lakehouse Architecture &middot; Real-Time AI Readiness</strong></p>
+<p><strong>The Industrial Foundation for Scalable Data Lakehouses, Medallion Architecture, and Automated Quality Governance</strong></p>
 
-[![Governance](https://img.shields.io/badge/Strategy-Foundation_Layer-522c72?style=for-the-badge&labelColor=000000)](https://devopstrio.co.uk/)
-[![Cloud](https://img.shields.io/badge/Cloud-Azure_Data_Lake-0078d4?style=for-the-badge&logo=microsoftazure&labelColor=000000)](/terraform)
-[![Architecture](https://img.shields.io/badge/Architecture-Medallion_Lakehouse-962964?style=for-the-badge&labelColor=000000)](/terraform)
-[![Status](https://img.shields.io/badge/Status-Expert_Grade-success?style=for-the-badge&labelColor=000000)](https://devopstrio.co.uk/)
+[![Architecture](https://img.shields.io/badge/Architecture-Medallion_Lakehouse-522c72?style=for-the-badge&labelColor=000000)](https://devopstrio.co.uk/)
+[![Cloud](https://img.shields.io/badge/Platform-Azure_Data-0078d4?style=for-the-badge&logo=microsoftazure&labelColor=000000)](/terraform)
+[![Quality](https://img.shields.io/badge/Engine-DQRE_v2.0-962964?style=for-the-badge&labelColor=000000)](/terraform)
+[![Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge&labelColor=000000)](https://devopstrio.co.uk/)
 
 <br/>
 
-> **"Data is the fuel for AI, but only if it's refined."** The EDPA is a production-grade foundation designed to accelerate the transition from raw data to ML-ready features, providing the industrial-scale infrastructure required for enterprise AI transformation.
+> **"Data is the fuel; Quality is the engine."** The Enterprise Data Platform Accelerator (EDPA) is a production-hardened blueprint for building secure, scalable, and governed data ecosystems that power the next generation of AI and Analytics.
 
 </div>
 
 ---
 
-## 📈 Strategic Portfolio Alignment
+## 🏛️ Executive Summary
 
-The EDPA serves as the **Foundation Layer** in the Devopstrio Enterprise Stack. It is specifically designed to remediate the "Data Readiness" gaps identified by the [AI Engineering Maturity Model (AI-EMM)](https://github.com/Devopstrio/ai-engineering-maturity-model).
+The **Enterprise Data Platform Accelerator (EDPA)** is a comprehensive framework designed to standardize the deployment of **Medallion Lakehouses** on Azure. By integrating automated data quality enforcement (DQRE) and network-isolated persistence layers, EDPA ensures that organizations move from "Data Swamps" to "Strategic Intelligence Hubs."
 
-| Maturity Gap (AI-EMM) | EDPA Implementation Solution | Maturity Level Target |
-|:---|:---|:---:|
-| **No Data Governance** | Microsoft Purview + Automated Lineage | Level 4 |
-| **Poor Data Quality** | Data Quality Rules Engine (DQRE) Validation | Level 5 |
-| **Batch-only Ingestion** | Event-Driven Streaming Engine (Event Hubs/Kafka) | Level 4 |
-| **Monolithic Storage** | Medallion Lakehouse Architecture (Bronze/Silver/Gold) | Level 5 |
+### Strategic Business Outcomes
+- **Zero-Day Data Readiness**: Pre-configured pipelines to accelerate AI project onboarding.
+- **Automated Quality Governance**: Real-time schema validation and quarantine logic for non-compliant data.
+- **Industrial Scale**: Engineered for multi-terabyte ingestion with ZRS-redundant ADLS Gen2 backbone.
+- **Regulatory Compliance**: Integrated PII detection and audit-logging for GDPR/HIPAA-ready environments.
 
 ---
 
-## 🏛️ High-Performance Architecture
+## 🏗️ Technical Architecture
 
-The EDPA implements a **Zero-Trust, Event-Driven Lakehouse** that spans internal and external datasets.
-
+### 1. High-Level Blueprint
 ```mermaid
 graph TD
-    subgraph Ingestion_Layer
-        A[External API / IoT] -->|Stream| B[Azure Event Hubs]
-        C[Internal DB / ERP] -->|Batch| D[Azure Data Factory]
+    subgraph Data_Sources
+        ERP[ERP Systems]
+        IOT[IoT Sensors]
+        API[External APIs]
     end
     
-    subgraph Lakehouse_Foundation
-        direction TB
-        B & D --> L1[Bronze: Raw Landing Zone]
-        L1 -->|Validation| L2[Silver: Cleaned & Unified]
-        L2 -->|Aggregation| L3[Gold: ML-Ready Features]
+    subgraph Landing_Zone
+        L[Raw Landing Area]
+        ERP --> L
+        IOT --> L
     end
     
-    subgraph Governance_Control
-        direction LR
-        L1 & L2 & L3 --- G1[Purview: Lineage]
-        L1 & L2 & L3 --- G2[DQRE: Validation]
+    subgraph Medallion_Lakehouse
+        B[Bronze: Raw Ingestion]
+        S[Silver: Cleaned & Unified]
+        G[Gold: Business Ready]
+        L --> B
+        B -->|Quality Engine| S
+        S --> G
     end
     
-    subgraph Consumer_Layer
-        L3 --> AI[AI-EMM Assessment Engine]
-        L3 --> ML[MLOps Training Pipelines]
-        L3 --> BI[Power BI Analytics]
+    subgraph Consumption_Tier
+        AI[AI Model Training]
+        BI[Business Intelligence]
+        FED[Data Federation]
+        G --> AI
+        G --> BI
+        G --> FED
     end
 ```
 
----
-
-## ✨ Core Product Pillars
-
-### 🌊 Medallion Data Lifecycle
-Synchronized lifecycle management for your data lakehouse:
-- **Bronze (Immutable)**: Capturing raw fidelity with infinite retention.
-- **Silver (Unified)**: Schema enforcement, deduplication, and PII masking.
-- **Gold (Optimized)**: High-performance columnar formats (Parquet/Delta) for AI training.
-
-### 🛡️ Secure-by-Default (Zero-Trust)
-- **VNet Isolation**: All data processing nodes operate within a private network boundary.
-- **Private Link Integration**: Storage accounts and compute runtimes use Private Endpoints.
-- **Managed Identities**: System-driven access control replacing legacy connection strings.
-
-### ⚙️ Governance-as-Code
-- **Automated Cataloging**: Native integration with Microsoft Purview for metadata discovery.
-- **Quality Gates**: CI/CD for data pipelines that enforce "Schema Contracts" before ingestion.
-
----
-
-## 📦 Infrastructure-as-Code (Expert Tier)
-
-### Terraform Blueprint
-```hcl
-module "lakehouse" {
-  source      = "./modules/lakehouse"
-  environment = "prod"
-  tier        = "Performance" # Optane-accelerated / NVMe tiers
-}
-```
-
-### Deployment Topology
+### 2. Medallion Flow & Quality Gates
 ```mermaid
 graph LR
-    subgraph Secure_VNet
-        S1[Subnet: Ingestion] --> S2[Subnet: Processing]
-        S2 --> S3[Subnet: Private Link Storage]
+    B[Bronze Layer] -->|Schema Validation| S[Silver Layer]
+    B -->|FAILED Checks| Q[Quarantine Zone]
+    S -->|Business Rules| G[Gold Layer]
+    
+    subgraph DQRE_Logic
+        V1[Checksum Valid]
+        V2[Schema Match]
+        V3[PII Sanitized]
     end
-    FW[Azure Firewall] --- S1
-    KV[Key Vault] --- S2
+    
+    DQRE_Logic -.-> B
+```
+
+### 3. Network Isolation & Private Link Boundary
+```mermaid
+graph TD
+    subgraph Hub_VNet
+        FW[Azure Firewall]
+        DNS[Private DNS]
+    end
+    
+    subgraph Spoke_Data_VNet
+        ADLS[ADLS Gen2]
+        PE[Private Endpoints]
+        EH[Event Hubs]
+    end
+    
+    FW <-->|Peering| Spoke_Data_VNet
+    ADLS --- PE
+    EH --- PE
 ```
 
 ---
 
-## 🚀 DevOps & Operational Readiness
-- **CI/CD Pipelines**: Pre-built YAML templates for Azure DevOps and GitHub Actions.
-- **Observability**: Built-in dashboards for Cost-per-Ingestion and Data Freshness.
-- **FinOps**: Automatic lifecycle policies to move cold data to "Archive" tiers.
+## 🛡️ Data Quality Rules Engine (DQRE)
+
+The platform features a proprietary **DQRE** layer that enforces integrity at the "Speed of Ingestion":
+
+- **Level 1: Structural Integrity**: Validates file formats, encodings, and mandatory headers.
+- **Level 2: Content Consistency**: Verifies data types, value ranges, and relational integrity.
+- **Level 3: Compliance & Privacy**: Automated detection of PII/PHI with masking-at-source capabilities.
+
+### Quality Reporting Workflow
+```mermaid
+sequenceDiagram
+    participant Source
+    participant DQRE
+    participant Silver
+    participant Audit_Log
+    
+    Source->>DQRE: Push Data Packet
+    DQRE->>DQRE: Execute 15 Validation Rules
+    DQRE->>Audit_Log: Recording Fidelity Score: 98.4%
+    DQRE->>Silver: Transition Authorized
+```
 
 ---
 
-## 🆘 Enterprise Support
-Devopstrio provides managed transition services for organizations migrating from Level 2 to Level 5 maturity.
+## 📦 Global Infrastructure Stack
 
-- **Consulting**: [edpa-support@devopstrio.co.uk](mailto:edpa-support@devopstrio.co.uk)
-- **Portfolio**: [devopstrio.co.uk/portfolio](https://devopstrio.co.uk/portfolio)
+| Layer | Component | Technology | Priority |
+|:---|:---|:---|:---:|
+| **Storage** | Medallion Lakehouse | ADLS Gen2 / HNS | Foundation |
+| **Ingestion** | Event-Driven | Event Hubs / Kafka | Real-Time |
+| **Quality** | DQRE v2.0 | Python / Spark | Governance |
+| **Processing** | Spark / SQL | Databricks / Synapse | Intelligence |
+| **Networking** | Hub-Spoke | Private Link / VNet | Security |
 
 ---
-<sub>&copy; 2026 Devopstrio &mdash; The Foundation for Enterprise AI.</sub>
+
+## 🚀 Deployment Guide
+
+### Terraform Orchestration
+```powershell
+./scripts/provision-edpa.ps1 -Tier prod
+```
+
+### 🗺️ Platform Roadmap
+
+- **Phase 1 (Release 1.0)**: Secure ADLS Gen2 Hub-Spoke & Bronze/Silver logic.
+- **Phase 2 (v1.5)**: Real-time Delta Lake conversion & Schema Evolution.
+- **Phase 3 (v2.0)**: "Autonomous Data Repair"—AI-driven reconciliation of Silver-tier gaps.
+
+---
+
+## 🆘 Support & Consulting
+Devopstrio provides dedicated **Data Platform Operations** to ensure 99.99% availability for enterprise intelligence hubs.
+
+- **Status**: [data-status.devopstrio.co.uk](https://devopstrio.co.uk)
+- **Consulting**: [data-ops@devopstrio.co.uk](mailto:data-ops@devopstrio.co.uk)
+
+---
+<sub>&copy; 2026 Devopstrio &mdash; Scaling Enterprise Data Engineering.</sub>
