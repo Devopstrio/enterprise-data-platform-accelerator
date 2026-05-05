@@ -1,20 +1,19 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="Data Accelerator Logo" />
+<img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="EDPA Logo" />
 
 <h1>Enterprise Data Platform Accelerator</h1>
 
-<p><strong>The Industry Standard for Industrialized Lakehouse Architectures and Data Mesh foundations</strong></p>
+<p><strong>The Institutional-Grade Platform for Standardized Data Foundations, Lakehouse Orchestration Governance, and Multi-Cloud Data Ecosystem Delivery.</strong></p>
 
-[![Platform: Data](https://img.shields.io/badge/Platform-Data-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Stack: Multi--Cloud](https://img.shields.io/badge/Stack-Multi--Cloud-green.svg?style=for-the-badge&labelColor=000000)]()
-[![Governance: Automated](https://img.shields.io/badge/Governance-Automated-ff69b4?style=for-the-badge&labelColor=000000)]()
+[![Standard: Data-Excellence](https://img.shields.io/badge/Standard-Data--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Secure--Data--Orchestration](https://img.shields.io/badge/Focus-Secure--Data--Orchestration-indigo.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
-> **"Unlocking institutional value through industrialized data foundations."** 
-> Enterprise Data Platform Accelerator is a flagship repository designed to enable organizations to design, deploy, and govern modern data estates at institutional scale through secure lakehouse patterns and data mesh principles.
+> **"Industrializing data delivery to automate lakehouse foundations."** 
+> **Enterprise Data Platform Accelerator (EDPA)** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global data operations. It orchestrates the complex lifecycle of data—from source ingestion and storage in the lakehouse to refined transformation and unified data auditing.
 
 </div>
 
@@ -22,776 +21,263 @@
 
 ## 🏛️ Executive Summary
 
-**Enterprise Data Platform Accelerator (EDPA)** is a flagship repository designed for Chief Data Officers (CDOs), CTOs, and Data Platform Leaders. As organizations transition from monolithic data warehouses to distributed lakehouse and data mesh architectures, the need for a standardized, secure, and automated data foundation becomes the critical path to AI and analytics readiness.
+Fragmented data silos and manual pipeline workflows are strategic operational liabilities; lack of centralized data orchestration is a primary barrier to organizational cloud maturity. Organizations fail to maintain a secure data foundation not because of a lack of databases, but because of fragmented data standards, lack of automated schema validation, and an inability to orchestrate data planes with operational precision.
 
-This platform provides an industrialized approach to **Modern Data Architecture**, delivering production-ready **Lakehouse Foundations**, **Medallion Refinement Pipelines**, **Unified Governance**, and **Self-Service Analytics Portals**. It supports **Databricks**, **Snowflake**, **Microsoft Fabric**, **BigQuery**, and **Redshift**, enabling organizations to transition from "Data Silos" to "Industrialized Data Value Streams."
-
----
-
-## 💡 Why Enterprise Data Platforms Matter
-
-A modern data platform is the engine of the digital enterprise:
-- **Democratized Insights**: Moving from centralized bottlenecked reporting to federated, self-service analytics.
-- **AI / ML Readiness**: Providing the feature pipelines and vector stores required for generative AI and predictive modeling.
-- **Data Governance at Scale**: Automating security, privacy, and quality across thousands of datasets through policy-as-code.
-- **Cost Transparency**: Implementing granular FinOps for data, enabling chargeback and optimization of compute/storage.
+This platform provides the **Data Intelligence Plane**. It implements a complete **Enterprise Data-Platform-Accelerator-as-Code Framework**, enabling Data and Platform teams to manage global data foundations as first-class citizens. By automating the identification of ingestion bottlenecks through real-time telemetry analysis and orchestrating the deployment of secure performance-driven data policies, we ensure that every organizational service—from core data lakes to distributed data products—is governed by default, audited for history, and strictly aligned with institutional data frameworks.
 
 ---
 
-## 🚀 Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Data Impact
-- **Accelerated Time-to-Insight**: Reducing the lead time for new data products from weeks to days through reusable blueprints.
-- **Reduced Technical Debt**: Standardizing ingestion and refinement patterns across the entire institution.
-- **Enhanced Data Trust**: Enforcing data quality and lineage as a foundational capability.
-- **Optimized TCO**: Reducing infrastructure and operational overhead through automated platform management.
-
----
-
-## 🏗️ Technical Stack
-
-| Layer | Technology | Rationale |
-|---|---|---|
-| **Governance Engine** | Python, Terraform, dbt | High-performance orchestration of institutional guardrails and metadata management. |
-| **Control Plane** | FastAPI | High-performance API for pipeline orchestration, catalog management, and cost tracking. |
-| **Frontend** | React 18, Vite | Premium portal for executive dashboards, data cataloging, and self-service analytics. |
-| **Data Targets** | Databricks, Snowflake, BigQuery | Supporting the leading multi-cloud lakehouse and warehouse platforms. |
-| **Pipeline Core** | dbt, Python, Spark | Industrialized transformation and refinement of institutional data assets. |
-| **Observability** | Prometheus / Grafana | Real-time monitoring of pipeline health, data quality, and platform latency. |
-
----
-
-## 📐 Architecture Storytelling: 80+ Diagrams
-
-### 1. Executive High-Level Architecture
-The holistic vision of the enterprise data transformation journey.
-
-```mermaid
-graph TD
-    User[Data Consumers / AI] --> Hub[Data Control Hub]
-    Hub --> Foundations[Foundational Platforms]
-    Hub --> Mesh[Domain Data Mesh]
-    Hub --> AI[AI / ML Enablement]
-    Hub --- Executive[Data Scorecards]
-```
-
-### 2. Detailed Platform Topology
-The internal service boundaries and management layers of the industrialized foundation.
+### 1. Principal Architecture: Global Enterprise Data Platform Accelerator & Data Intelligence Plane
+This diagram illustrates the end-to-end flow from data ingestion and multi-cloud orchestration to schema enforcement, quality validation, and institutional data auditing.
 
 ```mermaid
 graph LR
-    subgraph "Control Plane"
-        API[Platform API]
-        Metadata[(Metadata Store)]
-        Orchestrator[Pipeline Orchestrator]
+    %% Subgraph Definitions
+    subgraph DataIngress["Source & Ingestion Ingress"]
+        direction TB
+        Relational_DBs["SQL Server / Oracle / Postgres"]
+        SaaS_Apps["Salesforce / SAP / ServiceNow"]
+        Event_Streams["Kafka / Event Hub / IoT Hubs"]
     end
-    subgraph "Data Plane"
-        Ingest[Ingestion Hub]
-        Lake[Lakehouse / Warehouse]
-        Consum[Consumption Layer]
+
+    subgraph IntelligenceEngine["Data Intelligence Hub"]
+        direction TB
+        API["FastAPI Data Gateway"]
+        DataOrchestrator["Global Lakehouse & Schema Hub"]
+        Governance_Hub["Compliance & Contract Guardrail Hub"]
+        AIOps_Validator["Drift & Quality Analysis Hub"]
     end
-    API --> Metadata
-    Orchestrator --> Ingest
-```
 
-### 3. Data Producer to Consumer Path
-Tracing the lifecycle of a data asset from raw source to refined insight.
+    subgraph OperationsPlane["Distributed Data Ecosystem"]
+        direction TB
+        ManagedLakehouses["Managed Standardized Lakehouses"]
+        ActivePipelines["Managed Automated Data Pipelines"]
+        DataSinks["Managed Infrastructure Delivery Hubs"]
+    end
 
-```mermaid
-sequenceDiagram
-    participant Src as Data Source
-    participant Ingest as Ingestion Hub
-    participant Lake as Medallion Lakehouse
-    participant Cat as Data Catalog
-    participant User as Data Consumer
+    subgraph OperationsHub["Institutional Data Hub"]
+        direction TB
+        Scorecard["Data Maturity Scorecard"]
+        Analytics["Data Flow & Readiness Velocity Stats"]
+        Audit["Forensic Data Metadata Lake"]
+    end
+
+    subgraph DevOps["Enterprise-Data-Platform-Accelerator-as-Code Framework"]
+        direction TB
+        TF["Terraform Data Modules"]
+        DriftBot["Data & Config Drift Validator"]
+        ChatOps["Data Operations Hub"]
+    end
+
+    %% Flow Arrows
+    DataIngress -->|1. Submit Source| API
+    API -->|2. Orchestrate Ingestion| DataOrchestrator
+    DataOrchestrator -->|3. Apply Schema Guard| Governance_Hub
+    Governance_Hub -->|4. Assess Drift| AIOps_Validator
     
-    Src->>Ingest: Raw Data Ingest
-    Ingest->>Lake: Land in Bronze
-    Lake->>Lake: Refine (Silver/Gold)
-    Lake->>Cat: Register Asset
-    Cat->>User: Discover & Query
+    AIOps_Validator -->|5. Execute Provision| OperationsPlane
+    OperationsPlane -->|6. Notify Status| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track Maturity| Analytics
+    Scorecard -->|9. Record Provision| Audit
+    
+    TF -->|10. Provision Backbone| IntelligenceEngine
+    DriftBot -->|11. Inject Ingestion Risk| DataOrchestrator
+    Audit -->|12. Improve Operations| ManagedLakehouses
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef operations fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class DataIngress ingress;
+    class IntelligenceEngine intel;
+    class OperationsPlane operations;
+    class OperationsHub ops;
+    class DevOps devops;
 ```
 
-### 4. Control Plane Architecture
-The "Brain" of the framework managing global data asset definitions and policies.
-
-```mermaid
-graph TD
-    Hub[Data Hub] --> SiteA[Cloud A: Databricks]
-    Hub --> SiteB[Cloud B: Snowflake]
-    Hub --> SiteC[On-Prem: Postgres]
-    SiteA --> Policy[Governance Guardrails]
-```
-
-### 5. Multi-Cloud Topology
-Synchronizing institutional data standards across Azure, AWS, and GCP.
-
-```mermaid
-graph LR
-    User[Data Team] --> Portal[Institutional Hub]
-    Portal --> Site_AZ[Azure: Fabric / Synapse]
-    Portal --> Site_AWS[AWS: Redshift]
-    Portal --> Site_GCP[GCP: BigQuery]
-```
-
-### 6. Regional Deployment Model
-Hosting ingestion and compute close to the data sources for performance and cost.
-
-```mermaid
-graph TD
-    LB[Load Balancer] --> EastUS[US East: Ingest Hub]
-    LB --> WestUS[US West: DR Hub]
-    EastUS --> Vault[(Governance Store)]
-```
-
-### 7. DR Failover Model
-Ensuring platform continuity for critical reporting and real-time data streams.
+### 2. The Data Lifecycle Flow
+The continuous path of an infrastructure platform from initial ingest (source) and store (lake) to active transform (warehouse), serve (product), and institutional forensic auditing.
 
 ```mermaid
 graph LR
-    Primary[Active Platform] -->|Sync Metadata| Secondary[Standby Platform]
-    Secondary -->|Heartbeat| Primary
-    Primary --> Failover{System Down?}
-    Failover -->|Yes| Secondary
+    Ingest["Ingest (Source)"] --> Store["Store (Lake)"]
+    Store --> Transform["Transform (Warehouse)"]
+    Transform --> Serve["Serve (Product)"]
+    Serve --> Audit["Audit & Log"]
 ```
 
-### 8. API Gateway Architecture
-Securing and throttling the entry point for data orchestration and catalog access.
-
-```mermaid
-graph TD
-    Req[Incoming Data Req] --> Auth[OIDC / Entra ID]
-    Auth --> WAF[Web App Firewall]
-    WAF --> Router[Service Router]
-```
-
-### 9. Queue Worker Architecture
-Managing long-running ingestion and transformation jobs at scale.
+### 3. Distributed Data Mesh Topology
+Strategically orchestrating standardized data products across global cloud regions, diverse business domains, and multi-cloud targets, providing a unified institutional view of global data health and operational readiness.
 
 ```mermaid
 graph LR
-    Job[Transform: Finance_Gold] --> Redis[Redis Job Queue]
-    Redis --> W1[Worker Alpha: Batch]
-    Redis --> W2[Worker Beta: Streaming]
-    W1 --> Result[Update Pipeline State]
+    RegionA["Edge: Singapore (Finance) Hub"] -->|Sync| Hub["Unified Data Hub"]
+    BU["Hub: US East (Retail) Hub"] -->|Sync| Hub
+    Cloud["Site: Multi-Cloud (Azure/AWS) Node"] -->|Sync| Hub
+    Hub --- Logic["Global Data Engine"]
 ```
 
-### 10. Dashboard Analytics Flow
-How raw platform telemetry becomes executive data engineering scorecards.
+### 4. Data Governance & High-Trust Data Plane Protection Flow
+Executing complex logic for securing the bridge between data producers and analytical consumers, ensuring every organizational identity is verified and every data access is according to institutional standards.
 
 ```mermaid
 graph TD
-    Raw[Pipeline Logs / Cost Data] --> Parser[Findings Parser]
-    Parser --> Scorer[Readiness / Quality Scorer]
-    Scorer --> Dashboard[Executive UI]
+    DataProduct["Usage: Schema & Metadata Data"] --> Bridge["Rule: Guardrail Hub"]
+    Bridge --> ContractMap["Rule: Security & Policy Map"]
+    ContractMap -->|Evaluate| Context["PATH: Global Data View"]
+    Context --- Estimate["Data Integrity Score"]
 ```
 
-### 11. Batch Ingestion Workflow
-Standardizing the reliable movement of historical data into the lakehouse.
+### 5. Multi-Cloud Data Federation & Governance Flow
+Automatically managing unified data standards across global regions and diverse data platforms, ensuring institutional data residency and security boundaries by default.
 
 ```mermaid
 graph LR
-    Src[Source] --> Ingest[Ingest Job] --> Lake[Bronze Zone]
+    Org["Global Data System"] -->|Apply| Guard["Governance Isolation Hub"]
+    Guard -->|Violate| Alert["Ingestion Latency Alert"]
+    Guard -->|Pass| Verify["Status: Governed Data"]
+    Verify --- Audit["Isolation Compliance Log"]
 ```
 
-### 12. Streaming Ingestion Model
-Real-time ingestion for high-velocity events via Kafka or Event Hubs.
-
-```mermaid
-graph TD
-    Events[Event Stream] --> Broker[Kafka] --> Spark[Spark Streaming] --> Lake[Bronze]
-```
-
-### 13. CDC Replication Pattern
-Capturing database changes in real-time to keep the lakehouse synchronized.
+### 6. Encryption & Perimeter Protection Flow (Data Standard)
+Managing the lifecycle of a data request, automatically enforcing institutional TLS 1.3 and data-at-rest encryption standards as required by security policy, ensuring zero-latency security confidence.
 
 ```mermaid
 graph LR
-    DB[Source DB] --> CDC[CDC Tool] --> Stream[Kafka] --> Lake[Bronze]
+    DataReq["Data Access Query"] -->|Check| Gatekeeper["Data Protection Bot"]
+    Gatekeeper -->|Verify| TLS["TLS 1.3 & Data-at-Rest Encryption Check"]
+    TLS -->|Pass| Admit["Status: Secure Data Traffic"]
+    Admit --- Audit["Security Compliance Log"]
 ```
 
-### 14. API Ingestion Flow
-Securing and standardizing data retrieval from third-party SaaS APIs.
+### 7. Institutional Data Maturity Scorecard
+Grading organizational performance based on key indicators: Schema Compliance Grade, Data Quality Index, and Security Baseline Adoption Index.
 
 ```mermaid
 graph TD
-    SaaS[SaaS API] --> Worker[API Fetcher] --> Lake[Bronze]
+    Post["Data Health: 99%"] --> Risk["Ingestion Gap: 1%"]
+    Post --- C1["Compliance Grade (100%)"]
+    Post --- C2["Data Quality (98%)"]
 ```
 
-### 15. File Landing Zone Lifecycle
-Managing the ingestion and cleanup of flat files in object storage.
+### 8. Identity & RBAC for Data Governance
+Managing fine-grained access to data hubs, provisioning workers, and audit logs between Data Architects, Data Engineers, and Data Stewards.
+
+```mermaid
+graph TD
+    Architect["Data Architect"] --> Hub["Manage Data rules"]
+    Engineer["Data Engineer"] --> Exec["Execute provision checks"]
+    Steward["Data Steward"] --> Audit["Verify Data Proofs"]
+```
+
+### 9. IaC Deployment: Enterprise-Data-Platform-Accelerator-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the data tracking hubs, contract protection workers, and forensic metadata lakes.
 
 ```mermaid
 graph LR
-    Upload[Upload] --> Land[Landing] --> Ingest[Ingest] --> Archive[Archive]
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Data Control Plane"]
+    Engine --> Clusters["HA Validation Fleet"]
 ```
 
-### 16. IoT Telemetry Ingestion
-Handling massive, high-frequency sensor data at the edge and cloud.
-
-```mermaid
-graph TD
-    Sensor[Sensor] --> Edge[Edge Hub] --> Cloud[IoT Hub] --> Lake[Bronze]
-```
-
-### 17. Event-Driven Pipeline Model
-Triggering transformations automatically based on file arrivals or status changes.
+### 10. AIOps Data Drift & Risk Validation Flow
+Using advanced analytics to identify sudden surges in data volume, unauthorized schema changes, suspicious configuration drifts, or unusual data pattern changes that could result in institutional risk.
 
 ```mermaid
 graph LR
-    File[File Arrival] --> Trigger[Event Grid] --> Job[Transform Job]
+    Drift["Data Change Event"] --> Analyzer["Drift Detection Bot"]
+    Analyzer -->|Anomaly| Alert["Data Integrity Alert"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
 ```
 
-### 18. Schema Registry Workflow
-Enforcing schema standards and versioning across the data estate.
-
-```mermaid
-graph TD
-    Producer[Producer] --> Registry[Schema Registry] --> Consumer[Consumer]
-```
-
-### 19. Retry / DLQ Pattern
-Ensuring pipeline resilience through automated retries and Dead Letter Queues.
+### 11. Metadata Lake for Forensic Data Audit
+Storing long-term records of every data product generated (metadata), every security event recorded, and every data lineage history for institutional record-keeping, compliance auditing, and post-provisioning forensics.
 
 ```mermaid
 graph LR
-    Job[Job] --> Error[Error] --> Retry[Retry Loop]
-    Retry --> DLQ[Dead Letter Queue]
-```
-
-### 20. Orchestration Dependency Graph
-Visualizing the complex web of dataset dependencies and job triggers.
-
-```mermaid
-graph TD
-    Ingest[Ingest] --> Bronze[Bronze]
-    Bronze --> Silver[Silver]
-    Silver --> Gold[Gold]
-```
-
-### 21. Bronze Silver Gold Architecture
-The foundational Medallion architecture for data refinement.
-
-```mermaid
-graph LR
-    Raw[Raw] --> Bronze[Bronze] --> Silver[Silver] --> Gold[Gold]
-```
-
-### 22. Medallion Refinement Flow
-Tracing the transformation logic applied at each refinement stage.
-
-```mermaid
-graph TD
-    Bronze[Bronze: Raw] --> Clean[Silver: Cleaned] --> Agg[Gold: Aggregated]
-```
-
-### 23. Warehouse Semantic Layer Model
-Creating a business-friendly view of complex lakehouse datasets.
-
-```mermaid
-graph LR
-    Lake[Lakehouse] --> View[Semantic Layer] --> BI[BI Tool]
-```
-
-### 24. Object Storage Zone Layout
-Organizing ADLS/S3/GCS into logical zones for security and scale.
-
-```mermaid
-graph TD
-    Root[Storage Root] --> Landing[Landing]
-    Root --> Raw[Raw]
-    Root --> Curated[Curated]
-```
-
-### 25. Partitioning Strategy
-Optimizing query performance through intelligent data layout.
-
-```mermaid
-graph LR
-    Data[Data] --> Part[Year / Month / Day]
-```
-
-### 26. Small Files Optimization Model
-Automatically compacting small files to prevent "Small File Problem" in Spark.
-
-```mermaid
-graph TD
-    Small[Small Files] --> Compact[Compaction Job] --> Large[Optimized Parquet]
-```
-
-### 27. Time Travel / Snapshot Model
-Accessing historical versions of data through Delta Lake or Iceberg snapshots.
-
-```mermaid
-graph LR
-    Query[Query] --> Snapshot[V1 / V2 / V3]
-```
-
-### 28. Data Retention Lifecycle
-Automating the archiving and deletion of data based on compliance rules.
-
-```mermaid
-graph LR
-    Active[Active] --> Cool[Cool] --> Archive[Archive] --> Delete[Delete]
-```
-
-### 29. Backup Archive Workflow
-Ensuring multi-region data durability for disaster recovery.
-
-```mermaid
-graph TD
-    Lake[Lake] --> Backup[Backup Store] --> Remote[Remote Region]
-```
-
-### 30. Cross-Region Replication Model
-Syncing datasets globally for local low-latency access.
-
-```mermaid
-graph LR
-    RegionA[East US] <-> Sync[Geo Sync] <-> RegionB[West US]
-```
-
-### 31. Catalog Ownership Model
-Defining who owns and manages metadata across the institution.
-
-```mermaid
-graph TD
-    Owner[Business Owner] --> Meta[Catalog Entry]
-```
-
-### 32. Unity Catalog Style Permissions
-Implementing unified, attribute-based access control (ABAC) for data.
-
-```mermaid
-graph LR
-    User[User] --> UC[Unity Catalog] --> Asset[Data Asset]
-```
-
-### 33. RBAC Model
-Defining granular roles for Data Engineers, Scientists, and Analysts.
-
-```mermaid
-graph TD
-    Role[Data Scientist] --> Perm[Read Silver/Gold]
-```
-
-### 34. ABAC Tag Governance
-Securing data based on classification tags (e.g., PII, Restricted).
-
-```mermaid
-graph LR
-    Tag[PII] --> Policy[Deny External Access]
-```
-
-### 35. Row-Level Security Flow
-Filtering data results dynamically based on user identity or region.
-
-```mermaid
-graph TD
-    User[User: EMEA] --> Query[Select] --> Filter[Region = EMEA]
-```
-
-### 36. Column Masking Workflow
-Protecting sensitive data fields through automated masking.
-
-```mermaid
-graph LR
-    Raw[Email: foo@bar.com] --> Mask[f***@bar.com]
-```
-
-### 37. Sensitive data discovery model
-Automatically scanning datasets for hidden PII or security risks.
-
-```mermaid
-graph TD
-    Scan[Scan] --> PII[PII Detected] --> Alert[Alert / Tag]
-```
-
-### 38. Audit Logging Architecture
-Centralized tracking of every data access and modification.
-
-```mermaid
-graph LR
-    Action[Query] --> Log[Audit Hub]
-```
-
-### 39. Privacy Boundary Model
-Enforcing regional data residency and privacy rules (GDPR / CCPA).
-
-```mermaid
-graph TD
-    EU[EU Boundary] --- US[US Boundary]
-```
-
-### 40. Key Management Workflow
-Managing the encryption keys for data at rest and in transit.
-
-```mermaid
-graph TD
-    Data[Data] --> KV[Key Vault]
-```
-
-### 41. BI Dashboard Access Model
-Governing how executive reports are shared and secured.
-
-```mermaid
-graph LR
-    Dash[Dashboard] --> Group[Finance AD Group]
-```
-
-### 42. Self-service SQL Workflow
-Empowering analysts to query the lakehouse through secure SQL endpoints.
-
-```mermaid
-graph TD
-    Analyst[Analyst] --> SQL[SQL Warehouse] --> Results[Data]
-```
-
-### 43. Semantic Model Architecture
-Standardizing business logic (metrics/KPIs) across the platform.
-
-```mermaid
-graph LR
-    Logic[Metric: Revenue] --> Model[Semantic Hub] --> Tools[BI / Apps]
-```
-
-### 44. Notebook Analytics Lifecycle
-Standardizing the promotion of notebooks from Sandbox to Production.
-
-```mermaid
-graph LR
-    SBX[Sandbox] --> PR[Code Review] --> PROD[Scheduled Job]
-```
-
-### 45. Reverse ETL Pattern
-Syncing refined data from the lakehouse back into business apps (CRM/ERP).
-
-```mermaid
-graph TD
-    Gold[Gold Data] --> Sync[Reverse ETL] --> CRM[Salesforce]
-```
-
-### 46. Data API Product Model
-Exposing refined datasets as secure, versioned REST/GraphQL APIs.
-
-```mermaid
-graph LR
-    API[Data API] --> App[Consumer App]
-```
-
-### 47. Federated Query Workflow
-Joining data across different platforms (e.g., Snowflake + Databricks) in real-time.
-
-```mermaid
-graph TD
-    Query[Query] --> Bridge[Query Bridge] --> Targets[Platforms]
-```
-
-### 48. Search Analytics Flow
-Enabling natural language search over the institutional data catalog.
-
-```mermaid
-graph LR
-    Search[Search: Sales] --> Cat[Catalog] --> Result[Datasets]
-```
-
-### 49. Executive KPI Scorecard Model
-Visualizing institutional performance metrics in a unified dashboard.
-
-```mermaid
-graph TD
-    Logic[KPI Hub] --> Scorecard[Executive UI]
-```
-
-### 50. Embedded Analytics Pattern
-Integrating data visualizations directly into internal enterprise portals.
-
-```mermaid
-graph LR
-    Portal[Portal] --> Embed[Embedded Chart]
-```
-
-### 51. Feature Store Architecture
-Managing and serving ML features for training and inference.
-
-```mermaid
-graph TD
-    Ingest[Pipeline] --> FS[Feature Store] --> Model[ML Model]
-```
-
-### 52. ML Training Data Pipeline
-Automating the creation of high-quality training sets for ML models.
-
-```mermaid
-graph LR
-    Raw[Data] --> Prep[Prep Job] --> Set[Training Set]
-```
-
-### 53. Batch Inference Workflow
-Running large-scale model predictions on historical data.
-
-```mermaid
-graph TD
-    Set[Data Set] --> Model[Inference Job] --> Result[Predictions]
-```
-
-### 54. Real-time Inference Model
-Serving low-latency ML predictions via secure model endpoints.
-
-```mermaid
-graph LR
-    Req[Req] --> EP[Model Endpoint] --> Res[Pred]
-```
-
-### 55. MLOps Promotion Flow
-The CI/CD journey for machine learning models from Dev to Prod.
-
-```mermaid
-graph LR
-    Train[Train] --> Test[Test] --> Registry[Registry] --> Deploy[Deploy]
-```
-
-### 56. Vector Search Architecture
-Enabling similarity search for GenAI and recommendation engines.
-
-```mermaid
-graph TD
-    Embed[Embeddings] --> Vector[Vector DB] --> Query[Search]
-```
-
-### 57. RAG Data Platform Integration
-Feeding institutional knowledge into LLMs via Retrieval Augmented Generation.
-
-```mermaid
-graph LR
-    Doc[Docs] --> Chunk[Chunker] --> Vector[Vector DB] <-> LLM[LLM]
-```
-
-### 58. Model Monitoring Workflow
-Tracking model drift and performance in production environments.
-
-```mermaid
-graph TD
-    Pred[Preds] --> Monitor[Drift Monitor] --> Alert[Alert]
-```
-
-### 59. AI Governance Lifecycle
-Governing the ethics, security, and usage of AI models across the estate.
-
-```mermaid
-graph LR
-    Req[AI Project] --> Review[Ethical Review] --> Auth[Auth]
-```
-
-### 60. Experiment Tracking Model
-Centralizing the history of ML experiments and hyperparameters.
-
-```mermaid
-graph TD
-    Run[Run] --> Tracker[MLflow / Weights & Biases]
-```
-
-### 61. Capacity Planning Workflow
-Predicting future data compute and storage needs based on growth.
-
-```mermaid
-graph TD
-    Trend[Usage Trend] --> Forecast[Capacity Needs]
-```
-
-### 62. Cost Allocation Model
-Attributing data platform costs to specific business units or projects.
-
-```mermaid
-graph LR
-    Bill[Cloud Bill] --> Assign[Dept: Marketing]
-```
-
-### 63. Chargeback / showback Workflow
-Visualizing departmental data consumption for financial accountability.
-
-```mermaid
-graph TD
-    Report[Usage Report] --> Dept[Business Lead]
-```
-
-### 64. Query Performance Optimization
-Automatically identifying and tuning expensive queries.
-
-```mermaid
-graph LR
-    Slow[Slow Query] --> Advisor[Tuning Guide]
-```
-
-### 65. Workload Isolation Model
-Separating high-priority reporting from ad-hoc analysis workloads.
-
-```mermaid
-graph TD
-    Compute[Shared Compute] --> Pool[Reporting Pool]
-    Compute --> Pool[Ad-Hoc Pool]
-```
-
-### 66. Metrics Pipeline
-Monitoring the performance of data platforms and pipeline health.
-
-```mermaid
-graph TD
-    Hub[Hub] --> Prom[Prometheus]
-```
-
-### 67. Logging Architecture
-The unified path for telemetry from pipelines to central operations.
-
-```mermaid
-graph LR
-    Log[Pipeline Log] --> Forwarder[Forwarder] --> Hub[Loki/Elastic]
-```
-
-### 68. Tracing Model
-Observing distributed data requests across complex mesh architectures.
-
-```mermaid
-graph TD
-    API[API] --> Pipeline[Pipeline] --> Lake[Lake]
-```
-
-### 69. Incident Response Workflow
-Standardized steps for handling a data breach or pipeline outage.
-
-```mermaid
-graph TD
-    Event[Event] --> Assess[Assess] --> Contain[Contain]
-```
-
-### 70. Change Management Model
-Standardizing changes to core institutional data infrastructure.
-
-```mermaid
-graph TD
-    Req[Change Req] --> CAB[Review Board] --> Execute[Approve]
-```
-
-### 71. Domain Ownership Topology
-Mapping data products to the business domains that own them.
-
-```mermaid
-graph TD
-    Domain[Finance] --> Product[Ledger Data Product]
-```
-
-### 72. Data Mesh Operating Model
-The federated organizational structure for modern data management.
-
-```mermaid
-graph LR
-    Central[Platform Team] <-> DomainA[Domain A] <-> DomainB[DomainB]
-```
-
-### 73. Data Steward Workflow
-The day-to-day lifecycle of a domain data steward.
-
-```mermaid
-graph TD
-    Req[New Data] --> Review[Steward Review] --> Catalog[Approve]
-```
-
-### 4. Executive Review Cadence
-The monthly review of data strategy and ROI for the leadership team.
-
-```mermaid
-graph LR
-    Stats[Stats] --> Deck[Executive Summary]
-```
-
-### 75. Quarterly Roadmap Cycle
-Aligning data platform evolution with the institutional business cycle.
-
-```mermaid
-graph TD
-    Q1[Build] --> Q2[Scale]
-```
-
-### 76. Vendor Integration Model
-Managing the integration of multiple data vendors into a unified platform.
-
-```mermaid
-graph LR
-    V1[Databricks] --- Hub[EDPA Hub] --- V2[Snowflake]
-```
-
-### 77. Multi-country Governance Model
-Governing global data assets under a single institutional framework.
-
-```mermaid
-graph TD
-    HQ[HQ] --> SiteA[London] --> SiteB[Singapore]
-```
-
-### 78. Data Maturity Roadmap
-The journey from "Manual Data" to "Industrialized Data Intelligence."
-
-```mermaid
-graph LR
-    S1[Ad-Hoc] --> S4[Autonomous Intelligence]
-```
-
-### 79. Training Enablement flow
-The path for upskilling the workforce on the modern data platform.
-
-```mermaid
-graph LR
-    Learn[Training] --> Cert[Certification] --> Practice[Project]
-```
-
-### 80. Continuous Improvement Loop
-The ultimate feedback cycle for institutional data excellence.
-
-```mermaid
-graph LR
-    Test[Test] --> Learn[Learn] --> Evolve[Evolve]
-    Evolve --> Test
+    Provision["Provision Interaction Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Data Metadata Lake"]
+    Lake --> Trends["Data Efficiency Trends"]
 ```
 
 ---
 
-## 🔬 Institutional Data Methodology
+## 🏛️ Core Governance Pillars
 
-### 1. The Lakehouse Evolution
-The Lakehouse architecture combines the performance and reliability of a data warehouse with the scale and flexibility of a data lake. Our platform standardizes this through:
-- **Medallion Refinement**: Bronze (Raw), Silver (Cleaned), Gold (Aggregated).
-- **Unity Governance**: A single control plane for all metadata and security.
-- **Engine Agnostic**: Switch between Spark, SQL, and Python with zero friction.
-
-### 2. Data Mesh & Domain Ownership
-We move away from a centralized "bottleneck" data team towards a federated model where domains (Finance, HR, Sales) own their data products, supported by a central platform team.
+1.  **Unified Foundation Coordination**: Maximizing resilience by centralizing all data measurement through a single institutional plane.
+2.  **Automated Lakehouse Provisioning**: Eliminating "manual data silos" through proactive orchestration and pattern verification.
+3.  **Sequential Schema Intelligence**: Ensuring zero-interruption operations through dependency-aware schema-driven data engineering.
+4.  **Zero-Trust Contract Protection**: Automatically enforcing identity-based access and rule evaluation across all data tiers.
+5.  **Autonomous Operations Logic**: Guaranteeing reliability through automated industry-specific data monitoring runbooks.
+6.  **Full Data Auditability**: Immutable recording of every schema change and data provision for institutional forensics.
 
 ---
 
-## 🚦 Getting Started
+## 🛠️ Technical Stack & Implementation
 
-### 1. Prerequisites
-- **Terraform** (v1.5+).
-- **Docker** & **Kubernetes**.
-- **Python 3.10+**.
+### Data Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Performance Engine**: Custom Python-based logic for multi-cloud data provisioning and DORA-style readiness metrics.
+*   **Integrations**: Native connectors for Databricks, Snowflake, Azure Fabric, and AWS Redshift APIs.
+*   **Persistence**: PostgreSQL (Data Ledger) and Redis (Live Contract State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege data management access.
 
-### 2. Local Setup
+### Governance Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Slate, Indigo (Modern high-fidelity data aesthetic).
+*   **Visualization**: D3.js for data topologies and Recharts for readiness velocity analytics.
+
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Data Hub**: Managed event sourcing for immutable data security timeline reconstruction.
+*   **IaC**: Modular Terraform for deploying the data landing zone and validation fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/data_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/enforcers`** | Distributed data provisioners | Databricks, Snowflake, Fabric APIs |
+| **`infrastructure/source_pipes`** | Data Ingestion Hubs | Webhooks, Lambda |
+| **`infrastructure/auditing`** | Forensic data sinks | S3, Athena, Quicksight |
+
+---
+
+## 🚀 Deployment Guide
+
+### Local Principal Environment
 ```bash
-# Clone the repository
-git clone https://github.com/Devopstrio/enterprise-data-platform-accelerator.git
+# Clone the landing zone platform
+git clone https://github.com/devopstrio/enterprise-data-platform-accelerator.git
 cd enterprise-data-platform-accelerator
 
-# Start the Data Governance Control Plane
-docker-compose up --build
+# Configure environment
+cp .env.example .env
+
+# Launch the EDPA stack
+make init
+
+# Trigger a mock schema update and automated contract validation simulation
+make simulate-edpa
 ```
-Access the Dashboard at `http://localhost:3000`.
+
+Access the Management Portal at `http://localhost:3000`.
 
 ---
 
-## 🛡️ Governance & Security
-- **Identity First**: Deep integration with OIDC and Entra ID for unified data access.
-- **Policy as Code**: Every data asset and pipeline is governed by institutional policy.
-- **Quality as a Service**: Automated dbt tests and quality scoring for every dataset.
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-<sub>&copy; 2026 Devopstrio &mdash; Engineering the Future of Industrialized Data Foundations.</sub>
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
